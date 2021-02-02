@@ -1,24 +1,24 @@
 # -*- coding: utf-8 -*-
 
+import setuptools
 
-from setuptools import setup, find_packages
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-
-with open('README.md') as f:
-    readme = f.read()
-
-with open('LICENSE') as f:
-    license = f.read()
-
-setup(
-    name='tablify',
-    version='0.1.0',
-    description='',
-    long_description=readme,
-    author='Kshitij',
+setuptools.setup(
+    name="tablify", 
+    version="0.0.1",
+    author="Kshitij",
     author_email='kshtjkmr35@gmail.com',
-    url='https://github.com/ikshitiz/tablify',
-    license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    description="This package is used to convert python data structure to html table.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/ikshitiz/tablify",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
 )
-
