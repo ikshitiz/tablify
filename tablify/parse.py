@@ -2,7 +2,7 @@ from tablify.core.html import HTML
 
 class pyobj():
     
-    def dictToHTMLTable(dict : dict):
+    def dictToHTMLTable(self, dict : dict):
         html = HTML(Header = dict.keys(),
                     tableStyles={'margin': '3px'},
                     trStyles={'background-color': '#7cc3a97d'},
