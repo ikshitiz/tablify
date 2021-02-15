@@ -34,4 +34,19 @@ class pyobj():
             html.addRow(row, trStyles={'background-color' : BGC},\
                 tdStyles={'padding': '1rem'})
         return html
+    
+    def listOfListToHTMLTable(self, listoflist : list, col: list) -> str:
+        html = HTML(Header = col,
+                    tableStyles={'margin': '3px'},
+                    trStyles={'background-color': '#7cc3a97d'},
+                    thStyles={ 'color': 'white'})
+        for i, row in enumerate(listoflist):
+            if i%2 == 0:
+                BGC = 'aliceblue'
+            else:
+                BGC = '#c2d4e4'
+            html.addRow(row, trStyles={'background-color' : BGC},\
+                tdStyles={'padding': '1rem'})
+        return html
+    
 
